@@ -26,7 +26,7 @@ pipeline {
                     sh "curl -v -u admin:Admin123* --upload-file webapp/dist-${packageJSONVersion}.zip http://3.12.35.119:8081/repository/lms/"     
             }
             }
-        }    */
+        }    
         stage('Deploy') {
             steps {
                 script {
@@ -40,6 +40,6 @@ pipeline {
                     sh "sudo cp -r webapp/dist/* /var/www/html"
             }
             }
-        } 
+        } */
     }
 }
